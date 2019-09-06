@@ -1,0 +1,136 @@
+
+
+
+/*********** ************* **********
+    Font
+*/
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pantonblack_caps';
+  src: url('fonts.text/panton_black/panton-blackcaps-webfont.woff2') format('woff2'),
+  url('fonts.text/panton_black/panton-blackcaps-webfont.woff') format('woff'),
+  url('fonts.text/panton_black/Panton-BlackCaps.otf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+/*********** ************* **********
+    General Style
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: SignikaNegative, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+body{
+  background: #0b0a0f;
+}
+
+.fa{
+  /*color: #5d55db;*/
+}
+.icon-bar img{
+  height:20px; width:20px;
+}
+
+
+
+
+
+
+
+
+/*********** ************* **********
+    General Style
+*/
+
+.background-border {
+  background: linear-gradient(#0b0a0f, #0b0a0f), linear-gradient(to right, rgba(112, 112, 112, 0.1), #6c63ff);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-left: 0;
+}
+
+
+.text-light-50 {
+  opacity: 0.6;
+  font-family: SignikaNegative, sans-serif;
+  font-size: 20px !important;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #f7f7f7;
+}
+
+
+
+
+
+/*********** ************* **********
+    Button Style
+*/
+
+.btn-black-custom{
+  background: #0b0a0f;
+  font-family: SignikaNegative, sans-serif;
+  line-height: 0.84;
+  letter-spacing: 2px;
+  color: #f7f7f7;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  padding:10px 30px;
+  border-radius: 30px;
+  border: solid 2px #6c63ff;
+}
+
+
+.btn-bold{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
