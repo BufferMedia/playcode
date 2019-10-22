@@ -1,272 +1,206 @@
 
 
+/**********************************
+    Font
+*/
 
-
-
-
-
-
-
-
-
-
-.bar-1 {
-  position: absolute;
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("images/polygon_background_center.png");
-  background-repeat:no-repeat;
-  background-position: center center;
-}
-
-.bar-2 {
-  position: absolute;
-  display: block;
-  margin-top: 0;
-  z-index: 2;
-  width: 100vw;
-  background: url("images/tri_group.png") no-repeat center;
-  height: 100vh;
-}
-
-
-.play-code {
-  padding-top: 4em;
-  padding-left: 3em;
-  width: 100vw;
-  height: 100vh;
-}
-
-@media screen and (max-width: 900px) {
-  .play-code {
-    width: 740px;
-    height: 502px;
-  }
-}
-
-.play-code > p {
-  font-size: 20em;
-  opacity: 0.05;
-  font-family: pantonblack_caps, serif;
-  font-weight: 500;
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-Light.ttf');
+  font-weight: 300;
   font-style: normal;
-  font-stretch: normal;
-  line-height: 0.76;
-  text-align: left;
-  color: #ccc;
+}
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media screen and (max-width: 900px) {
-  div.play-code > p{
-    font-size: 14em;
-    font-weight: 400;
+
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SignikaNegative;
+  src: url('fonts.text/Signika_Negative/SignikaNegative-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pantonblack_caps';
+  src: url('fonts.text/panton_black/panton-blackcaps-webfont.woff2') format('woff2'),
+  url('fonts.text/panton_black/panton-blackcaps-webfont.woff') format('woff'),
+  url('fonts.text/panton_black/Panton-BlackCaps.otf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: SignikaNegative, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  max-width: 100%;
+}
+
+body{
+  background: #0b0a0f;
+}
+
+
+
+
+
+/******************************
+   * Header Layout
+   *******/
+
+.header_main{
+  width: calc(100% - 50px);
+  float:left;
+  min-height:100vh;
+  margin-top:20px;
+}
+
+.header_main_sidebar{
+  width: 50px;
+  float:right;
+  margin-top:20px;
+  height:100vh !important;
+  border-left-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, rgba(108, 99, 255, 0.99) 60%, rgba(0, 0, 0, 0) 90%) 1 100%;
+}
+
+/*
+.header_main_sidebar{
+  width: 50px;
+  float:right;
+  border-left:solid 2px #6c63ff;
+  height:200px;
+  margin-top:20px;
+}
+*/
+
+.header_inner_blank{
+  width: calc(100% - 50px);
+  float:left;
+  height:40px;
+  background: linear-gradient(#0b0a0f, #0b0a0f), linear-gradient(to right, rgba(112, 112, 112, 0.1), #6c63ff);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border-bottom: 2px solid transparent;
+  border-right: 0;
+  border-left: 0;
+}
+
+.header_inner_blank_user_menu{
+  width: 50px;
+  float:right;
+  height:40px;
+  text-align: center;
+  padding:10px 10px;
+  border:solid 2px #6c63ff;
+  border-bottom: 0;
+  border-right: 0;
+  border-top-left-radius: 5px;
+}
+.header_inner_blank_user_menu a:hover{ opacity: 0.2; }
+
+
+@media screen and (max-width: 1000px) {
+  .header_main {
+    width: 100%;  /* calc(100% - 50px) */
+  }
+
+  .header_main_sidebar {
+    display: none;
+    /*width:  50px;*/
+  }
+
+
+  .header_inner_blank {
+    width: calc(100% - 50px);
+  }
+
+  .header_inner_blank_user_menu {
+    width: 50px;
+  }
+
+}
+
+
+
+/******************************
+ * Content Layout
+ *******/
+
+.main_content{
+  padding:10em;
+  background: url('../../assets/images/playcode.png') no-repeat center;
+  background-position: 60px 10px;
+  background-size: 80%;
+}
+@media screen and (max-width: 1000px) {
+  .main_content{
+    background-position: 20px 100px;
+    padding: 7em 2em 0 3em;
+  }
+  .header-text > .txt-left > h2 {
+    font-size: 1.2em;
   }
 }
 
-.bar-2 > .header-text {
-  position: relative;
-  height: 500px;
 
-  background: none;
-  vertical-align: center;
-  color: #ccc;
-  margin: 10em 0 0;
-  padding: 0 0 0 7em;
-}
-
-.bar-2 > .header-text {
-  display: flex;
-  /*flex-wrap: no-wrap;*/
-  flex-direction: row;
-
-}
-
-@media screen and (max-width: 800px){
-  .bar-2 > .header-text {
-    margin-top: 5em;
-    margin-left: 3em;
-
-  }
-}
-
-.header-text > .txt-left {
-  /*width: 60%;*/
-  /*height: 100%;*/
+.header-text .txt-left{
   line-height: 1.0;
   color: #fff;
   font-size: 2.4em;
   font-family: 'SignikaNegative', sans-serif;
-
 }
 
-
-
-
-.header-text.header_pad {
-  flex-basis: content;
-  width: 40%;
-  height: 100%;
-}
-
-.bar-2 > img {
-  max-width: 60%;
-}
-.header-text.header_pad > img {
-  max-width: 60%;
-}
-
-.header-text > .txt-left > h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-}
-
-
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 1000px) {
   .header-text > .txt-left > h2 {
-    font-size: 1.4em;
+    font-size: 1.9em;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
   }
-  .header-text {
-    padding-top: 3em;
-    padding-right: 2em;
-  }
-
-}
-
-.header-text > .txt-left > p {
-  color: #f7f7f7;
-  font-size: 0.4em;
-  /* font-weight: 400; */
-  line-height: 1.6;
-  letter-spacing: 2px;
-
 }
 
 
-.header-text > .txt-left > hr.left {
-  text-align: left;
-  margin-left: 0;
-  width: 10%;
-  color:#fff;
-  /* background: #fff; */
 
+/******************************
+ * Menu Layout
+ *******/
+
+.sidebar-menu-icon{
+  padding-top:10px;
 }
 
-
-.bar-3 {
-  position: Absolute;
-  display: inline-block;
-  margin-top: 0;
-  z-index: 3;
-  width: 100vw;
-  /* background: url(images/group-63.png); */
-  background-position-x: 82% ;
-  background-position-y: 0.3em;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  /* opacity: 0.08; */
-  height: 100vh;
-}
-
-.bar-3 .col-md-11 .col-md-12 {
-  /*position: relative;
+.sidebar-menu-icon a{
   display: block;
-  height: 60px;
-  width: 100%;
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, #6c63ff, rgba(0, 0, 0, 0)) 1% 100%;*/
-}
-.bar-3 .icon-top {
-  /*border-right-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(to top,#6c63ff, rgba(0, 0, 0, 0)) 1 100%;*/
+  text-align: center;
+  padding-bottom:15px !important;
 }
 
-.bar-3 .icon-bar {
-  border-left-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, rgba(108, 99, 255, 0.99) 60%, rgba(0, 0, 0, 0) 90%) 1 100%;
-  height:100vh;
-  /*background: linear-gradient(#0b0a0f, #0b0a0f), linear-gradient(to right, rgba(112, 112, 112, 0.1), #6c63ff);
-  background-origin: padding-box, border-box;
-  background-repeat: no-repeat; !* this is important *!
-  border-right: 3px solid transparent;
-  border-left: 3px solid transparent;*/
-}
-
-.bar-3 > .no-gutter{
-  margin-right:0;
-  margin-left:0;
-}
-
-.bar-3 > .col-md-1, .bar-3 > .col-sm-2 {
-  padding-right:0;
-  padding-left:0;
-}
-
-.icon-top {
-  width:50%;
-  padding-top: 1.5em;
-  position: relative;
-}
-
-.icon-top a {
-  display: block; /* Make the links appear below each other instead of side-by-side */
-  text-align: center; /* Center-align text */
-  transition: all 0.9s ease; /* Add transition for hover effects */
-  font-size: 18px; /* Increased font-size */
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ffffff;
-}
-
-.icon-top a:hover {
-  background-color: #ccc; /* Add a hover color */
-}
-
-.active {
-  background-color: rgb(36, 24, 70); /* Add an active/current color */
-}
-
-
-.icon-bar {
-  width: 50%; /* Set a specific width */
-  padding-top: 0;
-  position: relative;
-  float: right;
-}
-
-
-.icon-bar a {
-  display: block; /* Make the links appear below each other instead of side-by-side */
-  text-align: center; /* Center-align text */
-  padding: 10px; /* Add some padding */
-  transition: all 0.9s ease; /* Add transition for hover effects */
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ccc;
-}
-
-.icon-bar a:hover {
-  background: rgb(2,0,36);
-  background: linear-gradient(to right, rgba(100, 98, 235, 1), #ffffff) ;
-}
-
-.active {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(36, 24, 70) 100%);
-}
-
-.bar-3 > .col-lg-1, .col-md-1, .col-sm-2, .col-xs-2 {
-  padding-right: 0;
-  padding-left: 0;
-
-}
-
+/*.link_hover1 a:hover{*/
+/*  background: rgb(2,0,36);*/
+/*  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(43, 42, 100) 35%, rgb(38, 37, 85) 100%);*/
+/*}*/
